@@ -6,9 +6,13 @@ spring:
 dubbo:
   scan:
     base-packages: com.dzh.apache.dubbo.provider.service
+#    base-packages: com.dzh.apache.dubbo.provider
   protocol:
     name: dubbo
     # -1 代表 自动分配
-    port: -1
+#    port: -1
+    port: 20880
+#    port: 20881
+    serialization: kryo
   registry:
     address: nacos://192.168.17.102:8848
